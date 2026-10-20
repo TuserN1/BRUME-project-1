@@ -24,7 +24,8 @@
     }
 }
 .bgcaff{
-    width: 100%;
+    max-width: 272.57px;
+    max-height: 318px;
 
 }
 .Configurateur{
@@ -37,13 +38,23 @@
     display:none;
 }
 .hero{
-    width: ;
+    height: 411px;
     border-radius: 10PX;
     background-color: #E8DBC7 ;
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    .hero-butom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2{
+            
+        }
+    }
 
 }
 .hero-top{
@@ -52,7 +63,9 @@
     justify-content: space-between;
     
     span{
-        pa
+        padding: 5px 9px;
+        background-color:#FFFFFF;
     }
+    
 
 }
