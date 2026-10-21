@@ -18,14 +18,28 @@ const config = {
     vanille: { name: "Vanille", price: 3 }
   }
 };
-const bases= document.getElementsByClassName('base-choix')
-const base1 = bases[0].querySelectorAll('span')
-const base2 = bases[1].querySelectorAll('span')
-
-base1[0].innerHTML = config.base.espresso.name;
-base1[1].innerHTML = config.base.espresso.price;
-base2[0].innerHTML = config.base.filtre.name;
-base2[1].innerHTML = config.base.filtre.price;
+const addativ =',00 DH' ;
+const labels=document.querySelectorAll('label').querySelectorAll('span');
 
 
+// const bases= document.getElementsByClassName('base-choix')
+// const base1 = bases[0].querySelectorAll('')
+// const base2 = bases[1].querySelectorAll('span')
 
+// // base1[0].innerHTML = config.base.espresso.name ;
+// base1[1].innerHTML = config.base.espresso.price+addativ;
+// base2[0].innerHTML = config.base.filtre.name;
+// base2[1].innerHTML = "+"+config.base.filtre.price+addativ;
+
+
+
+// for (let count in config  && let i=0;i>;){
+    
+//     for(let elmnt in config[count] ){
+//         console.log(elmnt)
+//          base1[elmnt].innerHTML = config[count][elmnt][name]; 
+
+
+//     }
+
+// }

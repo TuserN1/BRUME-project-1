@@ -112,7 +112,6 @@ h4{
 
 }
 input{
-    position: absolute;
     opacity: 0;
     
 }
@@ -128,10 +127,11 @@ label{
     height: max-content;
     gap: 20px;
     
-    input:checked +div{
+    input:checked + div{
         outline: 3px solid var(--button-color);
         background-color: var(--select-color);
     }
+    
     div{
         display: flex;
         flex-direction: column;
@@ -157,6 +157,7 @@ label{
     }
     
 }
+
 .choix-name{
     display: flex;
     justify-content: space-between;
@@ -171,7 +172,7 @@ label{
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     
     
 
@@ -184,7 +185,7 @@ label{
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 .formholder{
     margin: 20px;
@@ -213,6 +214,9 @@ button{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    span:last-child{
+        font-size: 33px;
+    }
 
 }
 .totalzone>:last-child{
