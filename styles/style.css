@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
 
+
+:root{
+    --h-font: 'Playfair Display', serif;
+    --restfont: 'Montserrat', sans-serif;
+    --bgc:#FAF7F0;
+    --cards-color:#FFFFFF;
+    --button-color:#394B32;
+    --select-color:#E9EEDC;
+    --light-txt-color:#796A59;
+    --dark-txt-color:#30291F;
+
+
+}
 *{
-   font-family: 'Montserrat', sans-serif;
+  
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: var(--restfont);
 
 }
 .band{
@@ -51,21 +65,125 @@
         align-items: center;
         justify-content: center;
 
-        h2{
-            
-        }
+       
     }
 
 }
+ h3{
+            font-family: var(--h-font);
+}
+h4{
+
+    font-size: 14px;
+    color: var(--dark-txt-color);
+    font-weight: 700;
+
+}
+
 .hero-top{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    width: 94%;
     span{
         padding: 5px 9px;
         background-color:#FFFFFF;
+        padding: 8px;
+        
+
+        border-radius: 10px;
     }
     
 
+}
+input{
+    position: absolute;
+    opacity: 0;
+    
+}
+label{
+    width: 100%;
+    
+    height: max-content;
+    gap: 20px;
+    div{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--cards-color);
+        padding: 10px;
+        gap: 5px;
+        border-radius: 10px;
+        width:100%;
+        justify-content: center;
+        padding: 20px;
+
+       
+
+    }
+    div:hover{
+        outline: 6px solid var(--button-color);
+        background-color: var(--select-color);
+    }
+}
+.choix-name{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+
+
+}
+.customizer{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    
+    
+
+
+}
+.lighttxt{
+    color: var(--light-txt-color);
+}
+.customize{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+.formholder{
+    margin: 20px;
+    background-color: var(--cards-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.nextpagebut{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+
+}
+button{
+    background-color: var(--button-color);
+    color: var(--cards-color);
+    height: 56px;
+    width: 208px;
+    border-radius: 10px;
+    
+    
+}
+.totalzone{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.totalzone>:last-child{
+    font-size: 23px;
 }
