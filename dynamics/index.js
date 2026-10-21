@@ -18,5 +18,15 @@ const config = {
     vanille: { name: "Vanille", price: 3 }
   }
 };
-const base1= Document.getElementById('base1');
+const bases= document.getElementsByClassName('base-choix')
+const base1 = bases[0];
+const base2 = bases[1];
 console.log(base1)
+
+// base1.innerHTML = config.base.espresso.name;
+base2[1].innerHTML = config.base.espresso.price;
+base1[0].innerHTML = config.base.espresso.name;
+base2[1].innerHTML = config.base.espresso.price;
+
+
+

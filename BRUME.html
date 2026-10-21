@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/BRUME-project-1/styles/style.css">
     <title>custome-coffee</title>
-    <script src="dynamics/index.js" defer></script>
+    <script src="dynamics/index.js" defer ></script>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                 <div class="hero">
                     <div class="hero-top">
                         <span>LE CAFÉ, À VOTRE FAÇON</span>
-                        <div><span>01</span>/<span>04</span></div>
+                        <div class="lighttxt"><span>01</span>/<span>04</span></div>
                     </div>
                     <img class="bgcaff" src="assets/Café M.png" alt="">
                     <div class="hero-butom">
@@ -73,15 +73,15 @@
                             <div class="customize" class="scustom">
 
                                 <label class="">
-                                    <input id="base1" type="radio" name="base">
-                                    <div><span class="choix">Espresso</span>
-                                        <span class="base1" class="lighttxt">18,00 DH</span>
+                                    <input  type="radio" name="base">
+                                    <div class="base-choix"><span id="base1" class="choix">Epresso</span>
+                                        <span id="base1-prix" class="base1 lighttxt">18,00 DH</span>
                                     </div>
                                 </label>
                                 <label class="">
-                                    <input id="base2" type="radio" name="base">
-                                    <div><span class="choix">Filtre</span>
-                                        <span class="base2" class="lighttxt">16,00 DH</span>
+                                    <input type="radio" name="base">
+                                    <div class="base-choix"><span id="base2" class="choix">Filtre</span>
+                                        <span id="base2-prix" class="base2 lighttxt">16,00 DH</span>
                                     </div>
                                 </label>
 
@@ -95,20 +95,20 @@
 
                                 <label class="">
                                     <input  type="radio" name="taille">
-                                    <div><span class="choix">S · 150 ml</span>
-                                        <span class="taille" class="lighttxt">Inclus</span>
+                                    <div class="taille-choix"><span class="choix">S · 150 ml</span>
+                                        <span class="taille lighttxt">Inclus</span>
                                     </div>
                                 </label>
                                 <label class="">
                                     <input type="radio" name="taille">
-                                    <div><span class="choix">M · 250 ml</span>
-                                        <span class="tailleM" class="lighttxt">+ 4,00 DH</span>
+                                    <div class="taille-choix"><span class="choix">M · 250 ml</span>
+                                        <span class="tailleM lighttxt">+ 4,00 DH</span>
                                     </div>
                                 </label>
                                 <label class="">
                                     <input type="radio" name="taille">
-                                    <div><span class="choix">L · 350 ml</span>
-                                        <span class="tailleL" class="lighttxt">+ 8,00 DH</span>
+                                    <div class="taille-choix"><span class="choix">L · 350 ml</span>
+                                        <span class="tailleL lighttxt">+ 8,00 DH</span>
                                     </div>
                                 </label>
                             </div>
@@ -121,20 +121,20 @@
 
                                 <label class="">
                                     <input type="radio" name="lait">
-                                    <div><span class="choix">Vache</span>
-                                        <span class="lait2" class="lighttxt">Inclus</span>
+                                    <div class="lait-choix"><span class="choix">Vache</span>
+                                        <span class="lait2 lighttxt">Inclus</span>
                                     </div>
                                 </label>
                                 <label class="">
                                     <input type="radio" name="lait">
-                                    <div><span class="choix">Avoine</span>
-                                        <span class="lait1" class="lighttxt">+ 4,00 DH</span>
+                                    <div class="lait-choix"><span class="choix">Avoine</span>
+                                        <span class="lait1 lighttxt">+ 4,00 DH</span>
                                     </div>
                                 </label>
                                 <label class="">
                                     <input type="radio" name="lait">
-                                    <div><span class="choix">Amande</span>
-                                        <span class="lait3" class="lighttxt">+ 5,00 DH</span>
+                                    <div class="lait-choix"><span class="choix">Amande</span>
+                                        <span class="lait3 lighttxt">+ 5,00 DH</span>
                                     </div>
                                 </label>
                             </div>
@@ -147,14 +147,14 @@
 
                                 <label class="">
                                     <input type="checkbox" name="en-plus">
-                                    <div><span class="choix">Caramel</span>
-                                        <span class="touch1" class="lighttxt">+ 3,00 DH</span>
+                                    <div class="plus-choix"><span class="choix">Caramel</span>
+                                        <span class="touch1 lighttxt">+ 3,00 DH</span>
                                     </div>
                                 </label>
                                 <label class="">
                                     <input type="checkbox" name="en-plus">
-                                    <div><span class="choix">Vanille</span>
-                                        <span class="touch2" class="lighttxt">+ 3,00 DH</span>
+                                    <div class="plus-choix"><span class="choix">Vanille</span>
+                                        <span class="touch2 lighttxt">+ 3,00 DH</span>
                                     </div>
                                 </label>
 
@@ -192,14 +192,14 @@
                     <button type="button">Ajouter au panier →</button>
                 </div>
             </div>
-            <div>
+            <div class="last-part">
                 <span class="lighttxt">BRUME — Le goût de votre rythme.</span>
-                <span>Une création unique, la vôtre.</span>
+                <span class="summary">Une création unique, la vôtre.</span>
             </div>
         </section>
 
     </main>
-    <footer>
+    <footer class="summary">
         <div>BRUME — Le goût de votre rythme.</div>
         <div>Une création unique, la vôtre.</div>
     </footer>

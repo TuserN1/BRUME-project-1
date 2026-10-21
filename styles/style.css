@@ -69,12 +69,24 @@
     }
 
 }
- h3{
+.intro{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2{
+        width: 270px;
+        font-weight: 500;
+        font-size: 36px;
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
             font-family: var(--h-font);
 }
 h4{
 
-    font-size: 14px;
+    font-size: 15px;
     color: var(--dark-txt-color);
     font-weight: 700;
 
@@ -84,15 +96,18 @@ h4{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 94%;
     span{
         padding: 5px 9px;
         background-color:#FFFFFF;
-        padding: 8px;
+        
+        margin: 10px 0px;
         
 
-        border-radius: 10px;
+        border-radius: 16px;
     }
+    
     
 
 }
@@ -101,34 +116,55 @@ input{
     opacity: 0;
     
 }
+h4{
+    font-family: var(--h-font);
+    font-size: 14px;
+    font-weight: 700;
+
+}
 label{
     width: 100%;
     
     height: max-content;
     gap: 20px;
+    
+    input:checked +div{
+        outline: 3px solid var(--button-color);
+        background-color: var(--select-color);
+    }
     div{
         display: flex;
         flex-direction: column;
         background-color: var(--cards-color);
-        padding: 10px;
         gap: 5px;
-        border-radius: 10px;
+        border-radius: 16px;
         width:100%;
         justify-content: center;
-        padding: 20px;
+        height: 70px;
+        padding-left: 20px;
+        border: 2px solid #DFD5C8;
+        
+        span{
+            font-size:14px ;
+        }
+        .choix{
+            font-weight: 500;
+        }
+        
 
        
 
     }
-    div:hover{
-        outline: 6px solid var(--button-color);
+    :has(input[type=radio]:checked){
+        outline: 3px solid var(--button-color);
         background-color: var(--select-color);
     }
 }
 .choix-name{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0px;
+    align-items: center;
+    margin: 15px 0px;
 
 
 }
@@ -138,22 +174,20 @@ label{
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     
     
 
 
 }
-.lighttxt{
-    color: var(--light-txt-color);
-}
+
 .customize{
    
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 .formholder{
     margin: 20px;
@@ -186,4 +220,28 @@ button{
 }
 .totalzone>:last-child{
     font-size: 23px;
+}
+.last-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding: 20px;
+}
+.lighttxt{
+    color: var(--light-txt-color);
+    font-size: 11px;
+    background: transparent;
+
+
+}
+
+@media(min-width:440px){
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        
+
+    }
 }
