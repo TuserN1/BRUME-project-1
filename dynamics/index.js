@@ -19,14 +19,13 @@ const config = {
   }
 };
 const bases= document.getElementsByClassName('base-choix')
-const base1 = bases[0];
-const base2 = bases[1];
-console.log(base1)
+const base1 = bases[0].querySelectorAll('span')
+const base2 = bases[1].querySelectorAll('span')
 
-// base1.innerHTML = config.base.espresso.name;
-base2[1].innerHTML = config.base.espresso.price;
 base1[0].innerHTML = config.base.espresso.name;
-base2[1].innerHTML = config.base.espresso.price;
+base1[1].innerHTML = config.base.espresso.price;
+base2[0].innerHTML = config.base.filtre.name;
+base2[1].innerHTML = config.base.filtre.price;
 
 
 

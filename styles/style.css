@@ -155,10 +155,7 @@ label{
        
 
     }
-    :has(input[type=radio]:checked){
-        outline: 3px solid var(--button-color);
-        background-color: var(--select-color);
-    }
+    
 }
 .choix-name{
     display: flex;
