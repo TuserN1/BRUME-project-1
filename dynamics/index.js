@@ -21,7 +21,12 @@ const config = {
 const addativ =',00 DH' ;
 const labels=document.querySelectorAll('label span');
 let i=0;
-const selected = [];
+const selected = [
+  base=null,
+  taille=null,
+  lait=null,
+  suplement=null,
+];
 
 for (let count in config ){
     
@@ -34,10 +39,24 @@ for (let count in config ){
     }
 
 }
+
+console.log(selected)
+function verifcheck(click){
+  for (i in selected){
+    // if (){}
+  }
+
+}
+
 function funselect(test){
-  console.log("test")
+  const click = test.target.parentElement.querySelectorAll('div>*');
+  const clickname=click[0];
+  console.log(clickname)
+
+
+
 }
 const test = document.querySelectorAll('input');
 test.forEach(element => {
-  element.addEventListener("change", funselect )
+  element.addEventListener("click", funselect )
 });
