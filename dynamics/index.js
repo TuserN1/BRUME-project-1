@@ -9,9 +9,9 @@ const config = {
     l: { name: "L · 350 ml", price: 8 }
   },
   lait: {
-    vache: { name: "Lait de vache", price: 0 },
-    avoine: { name: "Lait d'avoine", price: 4 },
-    amande: { name: "Lait d'amande", price: 5 }
+    vache: { name: "vache", price: 0 },
+    avoine: { name: "avoine", price: 4 },
+    amande: { name: "amande", price: 5 }
   },
   supplements: {
     caramel: { name: "Caramel", price: 3 },
@@ -19,27 +19,25 @@ const config = {
   }
 };
 const addativ =',00 DH' ;
-const labels=document.querySelectorAll('label').querySelectorAll('span');
+const labels=document.querySelectorAll('label span');
+let i=0;
+const selected = [];
 
-
-// const bases= document.getElementsByClassName('base-choix')
-// const base1 = bases[0].querySelectorAll('')
-// const base2 = bases[1].querySelectorAll('span')
-
-// // base1[0].innerHTML = config.base.espresso.name ;
-// base1[1].innerHTML = config.base.espresso.price+addativ;
-// base2[0].innerHTML = config.base.filtre.name;
-// base2[1].innerHTML = "+"+config.base.filtre.price+addativ;
-
-
-
-// for (let count in config  && let i=0;i>;){
+for (let count in config ){
     
-//     for(let elmnt in config[count] ){
-//         console.log(elmnt)
-//          base1[elmnt].innerHTML = config[count][elmnt][name]; 
+    for(let elmnt in config[count] ){
+         labels[i].innerHTML = config[count][elmnt].name;
+         labels[++i].innerHTML = config[count][elmnt].price+addativ;
+        
+          i++
+         
+    }
 
-
-//     }
-
-// }
+}
+function funselect(test){
+  console.log("test")
+}
+const test = document.querySelectorAll('input');
+test.forEach(element => {
+  element.addEventListener("change", funselect )
+});
