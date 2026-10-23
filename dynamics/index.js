@@ -38,7 +38,7 @@ for (let count in config) {
     i++
 
   }
-  
+
 
 }
 
@@ -46,43 +46,45 @@ for (let count in config) {
 
 function funselect(test) {
   const click = test.target.parentElement.querySelectorAll('div>span')[0];
-  const nameclicked =click.dataset.name;
-    selected[nameclicked]=click.dataset.price
-    
-  }
-  const test = document.querySelectorAll('input');
-  test.forEach(element => {
-    element.addEventListener("click", funselect)
+  const nameclicked = click.dataset.name;
+  selected[nameclicked] = click.dataset.price
+
+}
+const test = document.querySelectorAll('input');
+test.forEach(element => {
+  element.addEventListener("click", funselect)
+}
+
+);
+
+
+function total() {
+  let totalcalc = 0;
+  Object.values(selected).forEach(element => {
+    if (element !== null) {
+      totalcalc += Number(element);
+      console.log(totalcalc)
+
+      
+      
+    } else {
+      // console.log("your choix est unvalide")
+      totalcalc = 0
+    }
+    return totalcalc
+
   }
   
 );
-
-
-function total(){
-  let totalcalc=0;
-  Object.values(selected).forEach(element => {
-    if (element !== null){
-      totalcalc+= Number(element);
-      console.log(totalcalc)
-      
-
-
-      }else{
-        console.log("your choix est unvalide")
-        totalcalc=0
-      }
-     
-  }
-);
- 
+return totalcalc
 
 }
 
-document.getElementsByClassName('totalcalc').innerHTML="hello";
-
-if (document.querySelector('.btnadd').addEventListener('click',total)){
+document.querySelector('.testTotal').textContent=total();
+console.log(document.getElementsByClassName('testTotal'))
+if (document.querySelector('.btnadd').addEventListener('click', total)) {
   console.log(selected)
-
+  
 }
- 
-    
+console.log(total())
+
