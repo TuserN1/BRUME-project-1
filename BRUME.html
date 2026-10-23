@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/BRUME-project-1/styles/style.css">
     <title>custome-coffee</title>
-    <script src="dynamics/index.js" defer ></script>
+    <script src="dynamics/index.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="band">Du grain à votre tasse. Un café qui vous ressemble.</div>
         <div class="hheder">
             <div><img src="assets/Brume.png" alt=""><span>BRUME</span></div>
-            <nav>
+            <nav >
                 <a href="">L’atelier café</a>
                 <a href="">Notre savoir-faire</a>
                 <a href="">Besoin d’aide ?</a>
@@ -30,7 +30,7 @@
             <section class="title">
 
                 <div class="summary">
-                    <span>VOTRE CRÉATION EST PRÊTE</span>
+                    <span class="lighttxt">VOTRE CRÉATION EST PRÊTE</span>
                     <h1>Votre moment café, exactement comme vous l’aimez.</h1>
                 </div>
             </section>
@@ -45,11 +45,11 @@
                         <h3>Un petit rituel. Beaucoup de vous.</h3>
                         <span class="lighttxt">ESPRESSO · M · AVOINE · CARAMEL</span>
                     </div>
-                    <div class="summary">
-                        <span>
+                    <div class="sousimage">
+                        <span >
                             Torréfié avec soin
                         </span>
-                        <span>
+                        <span >
                             Préparé à la demande
                         </span>
                     </div>
@@ -67,7 +67,7 @@
                     </div>
                     <form action="">
                         <div>
-                            <div  class="choix-name">
+                            <div class="choix-name">
                                 <h4>01 La base</h4><span class="lighttxt">Choix unique</span>
                             </div>
                             <div class="customize" class="scustom">
@@ -88,13 +88,13 @@
                             </div>
                         </div>
                         <div>
-                            <div  class="choix-name">
+                            <div class="choix-name">
                                 <h4>02 La taille</h4><span class="lighttxt">Choix unique</span>
                             </div>
                             <div class="customizer">
 
                                 <label class="">
-                                    <input  type="radio" name="taille">
+                                    <input type="radio" name="taille">
                                     <div class="taille-choix"><span class="choix"></span>
                                         <span class="taille lighttxt"></span>
                                     </div>
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                         <div>
-                            <div  class="choix-name">
+                            <div class="choix-name">
                                 <h4>04 La touche en plus</h4><span class="lighttxt">Plusieurs choix</span>
                             </div>
                             <div class="customize" class="scustom">
@@ -159,6 +159,9 @@
                                 </label>
 
                             </div>
+                            <div class="lighttxt" style="margin-top:20px ; ">
+                                Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.
+                            </div>
 
                         </div>
 
@@ -166,24 +169,51 @@
                     </form>
                 </div>
 
-                <div class="summary">
-                    <span>✓ Sélection ajoutée</span>
+                <div class="summary factur">
+                    <span class="selectag1">✓ Sélection ajoutée</span>
+                    <span class="selectag2">aucune sélection</span>
                     <h3>Votre récapitulatif</h3>
-                    <span>Une création personnalisée · Quantité : <span>1</span></span>
-                    <div><span>Base · Espresso</span><span>18,00 DH</span></div>
-                    <div><span>Taille · M / 250 ml</span><span>4,00 DH</span></div>
-                    <div><span>Lait · Avoine</span><span>4,00 DH</span></div>
-                    <div><span>Supplément · Caramel</span><span>3,00 DH</span></div>
-                    <div><span>Total</span><span>29,00 DH</span></div>
-                    <span>Prix de cette sélection · aucun paiement effectué.</span>
+                    <span class="lighttxt">Une création personnalisée · Quantité : <span>1</span>
+                    </span>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="right-cell lighttxt">Base · Espresso</td>
+                                <td class="left-cell">18,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Taille · M / 250 ml</td>
+                                <td class="left-cell">4,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Lait · Avoine</td>
+                                <td class="left-cell">4,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Supplément · Caramel</td>
+                                <td class="left-cell">3,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Total</td>
+                                <td class="left-cell">29,00 DH</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <span class="lighttxt" >Prix de cette sélection · aucun paiement effectué.</span>
+
                     <button type="button">Créer un autre café →</button>
-                    <div><img src="assets/Vector.png" alt=""><span>Votre sélection reste modifiable à tout
-                            moment.</span></div>
+
+                    <div class="selectag1" style="width:auto; padding-left: 20px; display: flex;" >
+                        <img style="width: 12px; height: 12px; margin: 10px;" src="assets/Vector.png" alt="">
+                        <span  style="width:auto;">Votre sélection reste modifiable à tout
+                            moment.</span>
+                    </div>
                 </div>
             </article>
             <div class="nextpagebut">
-                <div >
-                    <div class="totalzone" > <span class="summary">Votre création · Café sur mesure</span>
+                <div>
+                    <div class="totalzone"> <span class="summary">Votre création · Café sur mesure</span>
                         <span class="lighttxt">Total</span>
                         <span>29,00 DH</span>
                     </div>
@@ -194,16 +224,13 @@
             </div>
             <div class="last-part">
                 <span class="lighttxt">BRUME — Le goût de votre rythme.</span>
-                <span class="summary">Une création unique, la vôtre.</span>
+                <span class="summary lighttxt">Une création unique, la vôtre.</span>
             </div>
         </section>
 
     </main>
-    <footer class="summary">
-        <div>BRUME — Le goût de votre rythme.</div>
-        <div>Une création unique, la vôtre.</div>
-    </footer>
     
+
 </body>
 
 </html>

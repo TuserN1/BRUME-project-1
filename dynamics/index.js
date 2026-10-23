@@ -20,6 +20,7 @@ const config = {
 };
 const addativ =',00 DH' ;
 const labels=document.querySelectorAll('label span');
+console.log(labels)
 let i=0;
 const selected = [
   base=null,
