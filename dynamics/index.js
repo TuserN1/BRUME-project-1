@@ -18,46 +18,71 @@ const config = {
     vanille: { name: "Vanille", price: 3 }
   }
 };
-const addativ =',00 DH' ;
-const labels=document.querySelectorAll('label span');
-console.log(labels)
-let i=0;
-const selected = [
-  base=null,
-  taille=null,
-  lait=null,
-  suplement=null,
-];
+const addativ = ',00 DH';
+const labels = document.querySelectorAll('label span');
+let i = 0;
+const selected = {
+  base: null,
+  taille: null,
+  lait: null,
+  supplements: null
+};
 
-for (let count in config ){
-    
-    for(let elmnt in config[count] ){
-         labels[i].innerHTML = config[count][elmnt].name;
-         labels[++i].innerHTML = config[count][elmnt].price+addativ;
-        
-          i++
-         
-    }
+for (let count in config) {
 
-}
+  for (let elmnt in config[count]) {
+    labels[i].innerHTML = config[count][elmnt].name;
+    labels[i].dataset.price = config[count][elmnt].price
+    labels[i].dataset.name = count;
+    labels[++i].innerHTML = config[count][elmnt].price + addativ;
+    i++
 
-console.log(selected)
-function verifcheck(click){
-  for (i in selected){
-    // if (){}
   }
+  
 
 }
 
-function funselect(test){
-  const click = test.target.parentElement.querySelectorAll('div>*');
-  const clickname=click[0];
-  console.log(clickname)
 
 
+function funselect(test) {
+  const click = test.target.parentElement.querySelectorAll('div>span')[0];
+  const nameclicked =click.dataset.name;
+    selected[nameclicked]=click.dataset.price
+    
+  }
+  const test = document.querySelectorAll('input');
+  test.forEach(element => {
+    element.addEventListener("click", funselect)
+  }
+  
+);
+
+
+function total(){
+  let totalcalc=0;
+  Object.values(selected).forEach(element => {
+    if (element !== null){
+      totalcalc+= Number(element);
+      console.log(totalcalc)
+      
+
+
+      }else{
+        console.log("your choix est unvalide")
+        totalcalc=0
+      }
+     
+  }
+);
+ 
 
 }
-const test = document.querySelectorAll('input');
-test.forEach(element => {
-  element.addEventListener("click", funselect )
-});
+
+document.getElementsByClassName('totalcalc').innerHTML="hello";
+
+if (document.querySelector('.btnadd').addEventListener('click',total)){
+  console.log(selected)
+
+}
+ 
+    
