@@ -10,7 +10,8 @@
     --select-color: #E9EEDC;
     --light-txt-color: #796A59;
     --dark-txt-color: #30291F;
-    --ajoutecolor:#E9EEDC;
+    --ajoutecolor: #E9EEDC;
+    --border-color: #DFD5C8;
 
 
 }
@@ -23,7 +24,8 @@
     font-family: var(--restfont);
 
 }
-main{
+
+main {
     background-color: var(--bgc);
 }
 
@@ -36,7 +38,7 @@ main{
     font-size: 11px;
     text-align: center;
     padding: 10.5px;
-    
+
 
 }
 
@@ -49,26 +51,27 @@ main{
     width: 100%;
     padding: 10px 20px;
     background-color: var(--bgc);
-     
-    div{
+
+    div {
         display: flex;
         align-items: center;
-     }
+    }
 
 
     nav {
-         display: none;
+        display: none;
         width: 60%;
         gap: 50px;
         align-items: center;
-        
-    a{
-        text-decoration: none;
-        color: var(--light-txt-color);
+
+        a {
+            text-decoration: none;
+            color: var(--light-txt-color);
 
 
 
-}    }
+        }
+    }
 }
 
 .bgcaff {
@@ -305,28 +308,32 @@ button {
 
 
 }
-.title{
+
+.title {
     margin: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    h1{
+
+    h1 {
         font-weight: 500;
         font-size: 32px;
-    
+
 
     }
 }
 
 
-.selectag1,selectag2 {
+.selectag1,
+selectag2 {
     display: inline-block;
     width: max-content;
     padding: 12px 8px;
     border-radius: 16px;
     background-color: var(--ajoutecolor);
     color: var(--button-color);
-    span{
+
+    span {
         color: var(--button-color);
     }
 
@@ -334,25 +341,31 @@ button {
 
 
 
-.factur{
+.factur {
     margin: 20px;
     padding: 20px;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     gap: 20px;
     border-radius: 16px;
-    border: 2px ,solid #DFD5C8;
+    border: 2px, solid var(--border-color);
     background-color: var(--cards-color);
 }
-.formholder,.nextpagebut,.sousimage {
+
+.formholder,
+.nextpagebut,
+.sousimage {
     display: block;
 }
-.summary{
+
+.summary {
     display: none;
 }
+
 table {
 
     width: 100%;
+
     .right-cell {
 
         text-align: left;
@@ -370,7 +383,7 @@ table {
 
 tr {
     height: 30px;
-    
+
 
 }
 
@@ -382,46 +395,100 @@ tr {
 
 
     }
-    .hheder>nav{
+
+    .hheder>nav {
         display: block;
-        
+
     }
-    .band{
+
+    .band {
         display: block;
     }
 }
 
-.productlist{
+/* page checkout */
+
+.productlist {
 
     background-color: var(--bgc);
     height: 100vh;
-    width: 100vw;
+    /* width:30vw; */
     display: flex;
+    margin: 10px;
     justify-content: center;
     align-items: center;
 
-     >div{
-        background-color: red;
-        width: 30rem;
+    >div {
+        background-color: var(--cards-color);
+        width: 95%;
         min-height: 40rem;
         border-radius: 16px;
+        border: 2px solid var(--border-color);
 
-       div{
-        background-color: var(--cards-color);
-        margin: 5px;
-        height: 100px ;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
+        >div {
+            background-color: var(--select-color);
+            border: 2px solid var(--button-color);
+            margin: 10px 10px;
+            height: 100px;
+            width: auto;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            gap: 5px;
 
-         button{
-            border: 0;
-            width:40px ;
-            height: 40px;
+            .valquantity{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            button {
+                border: 0;
+                width: 40px;
+                height: 40px;
+            }
         }
-       }
-        
+
     }
+
+}
+
+.my-money {
+
+    width: auto;
+    max-width: 20rem;
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        
+
+        input {
+            opacity: 100%;
+           
+
+
+        }
+        
+            
+
+    }
+
+
+
+}
+
+.searchsec {
+
+    display: none;
+}
+
+.main2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
 
 }

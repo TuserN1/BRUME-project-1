@@ -18,3 +18,11 @@ let coffeeCart = [
   { id: "c3", name: "Latte Caramel", price: 4.50, quantity: 1, image: "latte.jpg" },
   { id: "c8", name: "Mug Isotherme Noir", price: 15.00, quantity: 1, image: "mug.jpg" }
 ];
+
+
+for (const order in coffeeCart ){
+
+    document.querySelectorAll('.productlist>div')[0].innerHTML+=(`<div><span ></span><div class="valquantity"><button>-</button><span>0</span><button>+</button></div></div>`)
+
+
+}
