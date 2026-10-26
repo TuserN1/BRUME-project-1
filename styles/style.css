@@ -84,7 +84,9 @@ main{
 
 }
 
-
+/* .summary {
+    display:none; 
+}  */
 
 .hero {
     height: 411px;
@@ -342,13 +344,12 @@ button {
     border: 2px ,solid #DFD5C8;
     background-color: var(--cards-color);
 }
-/* .formholder,.nextpagebut,.sousimage {
+.formholder,.nextpagebut,.sousimage {
+    display: block;
+}
+.summary{
     display: none;
-} */
-.summary {
-    display:none; 
-} 
-
+}
 table {
 
     width: 100%;

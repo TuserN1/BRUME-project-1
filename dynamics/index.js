@@ -86,5 +86,3 @@ if (document.querySelector('.btnadd').addEventListener('click', total)) {
   console.log(selected)
   
 }
-console.log(total())
-
