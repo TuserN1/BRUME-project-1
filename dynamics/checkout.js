@@ -19,10 +19,14 @@ let coffeeCart = [
   { id: "c8", name: "Mug Isotherme Noir", price: 15.00, quantity: 1, image: "mug.jpg" }
 ];
 
+let coffeeCartcopy=[...coffeeCart]
 
-for (const order in coffeeCart ){
+for (const order in coffeeCartcopy ){
+    let urorder = coffeeCartcopy[order];
+    
+    console.log(urorder)
 
-    document.querySelectorAll('.productlist>div')[0].innerHTML+=(`<div><span ></span><div class="valquantity"><button>-</button><span>0</span><button>+</button></div></div>`)
+     document.querySelectorAll('.productlist>div')[0].innerHTML+=(`<div><span class="spanlist"><span>${urorder.category}</span>${urorder.name}</span><div class="valquantity"><button>-</button><span>0</span><button>+</button></div></div>`)
 
 
 }

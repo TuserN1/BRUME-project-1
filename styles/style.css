@@ -412,7 +412,7 @@ tr {
 
     background-color: var(--bgc);
     height: 100vh;
-    /* width:30vw; */
+    /* width:100%; */
     display: flex;
     margin: 10px;
     justify-content: center;
@@ -442,11 +442,12 @@ tr {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                margin: 5px 0px;
             }
             button {
                 border: 0;
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
             }
         }
 
@@ -456,22 +457,88 @@ tr {
 
 .my-money {
 
-    width: auto;
-    max-width: 20rem;
+    
+    /* width: 100%; */
+    padding: 10PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     form {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
+        height: 500px;
+        padding-right: 10px;
+        width: 90%;
+        justify-items: center;
+        align-items: center;
+        
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr 1fr; 
+        grid-template-areas: 
+            "first last"
+            "add add"
+            "mail mail"
+            "num num"
+            "cvv exd"
+            
+
+        ;
+        gap: 5px;
+        label{
+            display: flex; 
+            flex-direction: column;
+            padding-top: 5px;
+            
+             
+        }
+
+        .first{
+            grid-area:first ;
+        }
+        .last{
+            grid-area:last ;
+        }
+        .add{
+            grid-area: add;
+        }
+        .mail{
+            grid-area: mail;
+        }
+        .num{
+            grid-area: num; 
+        }
+        .cvv{
+                grid-area: cvv;
+        }
+        .exd{
+            grid-area: exd;
+        }
+        .submit{
+            justify-content: center;
+            align-self: center;
+            margin-top: 30px;
+            background-color: var(--button-color);
+            color: var(--cards-color);
+            
+        }
+        
         
 
         input {
             opacity: 100%;
+            height: 50px;
+            width: 100%;
+            background-color: var(--select-color);
+            border: 2px solid var(--button-color);
+            border-radius: 16PX;
+            padding: 10px;
+            
            
 
 
         }
         
+       
             
 
     }
@@ -480,11 +547,21 @@ tr {
 
 }
 
+ .valquantity{
+            
+    padding: 5px;
+
+}
+
 .searchsec {
 
     display: none;
 }
+.spanlist{
+    display: flex;
+    flex-direction: column;
 
+}
 .main2 {
     width: 100%;
     display: flex;
