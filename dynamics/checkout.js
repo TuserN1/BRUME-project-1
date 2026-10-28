@@ -17,16 +17,44 @@ let coffeeCart = [
   { id: "c2", name: "Cappuccino Mousseux", price: 4.00, quantity: 2, image: "cappuccino.jpg" },
   { id: "c3", name: "Latte Caramel", price: 4.50, quantity: 1, image: "latte.jpg" },
   { id: "c8", name: "Mug Isotherme Noir", price: 15.00, quantity: 1, image: "mug.jpg" }
+
 ];
 
 let coffeeCartcopy=[...coffeeCart]
+const coffeeProductscopy=[...coffeeProducts]
 
 for (const order in coffeeCartcopy ){
     let urorder = coffeeCartcopy[order];
-    
-    console.log(urorder)
+    coffeeProductscopy.forEach(element => {
+        
+        if (urorder.id== element.id ) 
+            {
 
-     document.querySelectorAll('.productlist>div')[0].innerHTML+=(`<div><span class="spanlist"><span>${urorder.category}</span>${urorder.name}</span><div class="valquantity"><button>-</button><span>0</span><button>+</button></div></div>`)
+        document.querySelectorAll('.productlist>div')[0].innerHTML+=(`<div class="${urorder.id}"><span class="spanlist"><span style="background-color:#796A59; border-radius:16px; padding:5px 8px; width:max-content; text-align:center;">${element.category}</span>${urorder.name}</span><span class="price" style="text-align:right; display:flex ; justify-content: end ; width:40%;"><span>${urorder.price * urorder.quantity}DH</span></span><div class="valquantity"><button class="sub-btn" style="font-weight: 700;">-</button><span>${urorder.quantity}</span><button class="add-btn">+</button></div></div>`)
+
+          
+        }
+        
+    });
+    
+
 
 
 }
+function subtruction(){
+    if(urorder.quantity>0){
+
+    }
+};
+function addition(){
+    
+};
+
+coffeeProductscopy.forEach(element => {
+    let idtest=`.${element.id}`
+    console.log(idtest)
+    console.log(document.querySelector(idtest))
+        document.querySelector(`.${element.id} .sub-btn`).addEventListener.target("click",subtruction)
+
+    
+});
