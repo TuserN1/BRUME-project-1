@@ -19,42 +19,75 @@ let coffeeCart = [
   { id: "c8", name: "Mug Isotherme Noir", price: 15.00, quantity: 1, image: "mug.jpg" }
 
 ];
-
 let coffeeCartcopy=[...coffeeCart]
 const coffeeProductscopy=[...coffeeProducts]
 
-for (const order in coffeeCartcopy ){
+
+function orderlist(){
+let total=0;
+
+    document.querySelectorAll('.productlist>div')[0].innerHTML=""
+    for (const order in coffeeCartcopy ){
     let urorder = coffeeCartcopy[order];
     coffeeProductscopy.forEach(element => {
         
-        if (urorder.id== element.id ) 
-            {
+        if (urorder.id == element.id ){
+            console.log(urorder.id)
+        let placement=document.querySelectorAll('.productlist>div')[0]
+        let content=(`<div id="${urorder.id}"><span class="spanlist"><span style="background-color:#796A59; border-radius:16px; padding:5px 8px; width:max-content; text-align:center;">${element.category}</span>${urorder.name}</span><span class="price" style="text-align:right; display:flex ; justify-content: end ; width:40%;"><span>${urorder.price * urorder.quantity}DH</span></span><div class="valquantity"><button id="sub-btn-${urorder.id}" style="font-weight: 700;">-</button><span>${urorder.quantity}</span><button id ="add-btn-${urorder.id}">+</button></div></div>`) 
+        placement.insertAdjacentHTML('beforeend', content)
 
-        document.querySelectorAll('.productlist>div')[0].innerHTML+=(`<div class="${urorder.id}"><span class="spanlist"><span style="background-color:#796A59; border-radius:16px; padding:5px 8px; width:max-content; text-align:center;">${element.category}</span>${urorder.name}</span><span class="price" style="text-align:right; display:flex ; justify-content: end ; width:40%;"><span>${urorder.price * urorder.quantity}DH</span></span><div class="valquantity"><button class="sub-btn" style="font-weight: 700;">-</button><span>${urorder.quantity}</span><button class="add-btn">+</button></div></div>`)
+        document.querySelector(`#sub-btn-${urorder.id}`).addEventListener("click",()=>{
+            
+            
+            
+        if (urorder.quantity>1) {
+            urorder.quantity-=1
+            orderlist()
 
-          
+        }            
+            
+        })
+        document.querySelector(`#add-btn-${urorder.id}`).addEventListener("click",()=>{
+            
+         
+            urorder.quantity+=1
+            orderlist()
+               
+           
         }
         
-    });
+        
+    )     
+    
+} 
+
+});
     
 
+    total+=urorder.quantity*urorder.price
+
+}
+const spanall= document.createElement("span")
+const divall= document.createElement("div")
+const btnAdd = document.createElement("button");
+const totallist = document.createElement("span");
+spanall.classList.add("divall");
+totallist.classList.add("totallist");
+btnAdd.classList.add("quickadd")
+totallist.insertAdjacentHTML("beforeend",`<span>total</span><span>${total}</span>`)
+btnAdd.innerText = "quick-add";
+document.querySelector('.productlist>div').append(spanall)
+document.querySelector('.productlist>div>span').append(divall)
+document.querySelector('.productlist>div>span>div').append(btnAdd)
+document.querySelector('.productlist>div>span>div').append(totallist)
 
 
 }
-function subtruction(){
-    if(urorder.quantity>0){
+orderlist();
+ const flotings=document.querySelector('searchsec')
+document.querySelector('.quickadd').addEventListener("click",()=>{
 
-    }
-};
-function addition(){
-    
-};
 
-coffeeProductscopy.forEach(element => {
-    let idtest=`.${element.id}`
-    console.log(idtest)
-    console.log(document.querySelector(idtest))
-        document.querySelector(`.${element.id} .sub-btn`).addEventListener.target("click",subtruction)
 
-    
 });

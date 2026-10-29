@@ -416,6 +416,7 @@ tr {
     /* width:100%; */
     display: flex;
     margin: 10px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -424,8 +425,27 @@ tr {
         width: 95%;
         min-height: 40rem;
         border-radius: 16px;
+        display: flex;
+        flex-direction: column;
         border: 2px solid var(--border-color);
+        
+        
+        button{
+            margin-top:auto ;
+            margin-bottom:15px ;
+            margin-left:15px ;
+        }
+        .divall{
+            margin-top:auto ;
+            width: 100%;
+        }
 
+        .totallists{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
         >div {
             background-color: var(--select-color);
             border: 2px solid var(--button-color);
@@ -441,9 +461,14 @@ tr {
 
             .valquantity{
                 display: flex;
+                
                 flex-direction: column;
                 align-items: center;
                 margin: 5px 0px;
+
+               button{
+                margin: 0;
+               }
             }
             button {
                 border: 0;
@@ -471,6 +496,7 @@ tr {
         width: 90%;
         justify-items: center;
         align-items: center;
+        /* padding-bottom: 10px ; */
         
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: 1fr 1fr; 
@@ -489,6 +515,7 @@ tr {
             display: flex; 
             flex-direction: column;
             padding-top: 5px;
+            
             
              
         }
@@ -521,10 +548,12 @@ tr {
             align-items: center;
             margin-top: 10px;
             width: 100%;
+            padding-bottom: 20PX;
             .submit{
                 background-color: var(--button-color);
                 color: var(--cards-color);
                 width: 40%;
+
             }
             
         }
@@ -562,11 +591,13 @@ tr {
 
 .searchsec {
 
-    display: none;
+    display: block;
 }
 .spanlist{
     display: flex;
     flex-direction: column;
+    margin-bottom: auto;
+    gap: 15px;
 
 }
 .main2 {
