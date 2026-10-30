@@ -91,22 +91,22 @@ document.querySelector('.quickadd').addEventListener("click", () => {
     var flotings = document.querySelector('.searchsec')
     // let content=document.querySelector('.my-money')
     // let content1=document.querySelector('.productlist')
-
+    
     if (window.getComputedStyle(flotings).display === "none") {
         flotings.style.display = "flex";
         // content.style.display ="none";
         // content1.style.display ="none";
-
+        
         searchfun()
-
-
+        
+        
     }
-
-
+    
+    
 });
 
+let typsearch="";
 function searchfun() {
-    let typsearch=""
     // console.log("hello");
     let stylesearch = document.querySelector('.searchsec');
     let divsearch = stylesearch.querySelector('div')
@@ -117,13 +117,14 @@ function searchfun() {
     stylesearch.style.position = "fixed";
     stylesearch.style.width = "100vw";
     stylesearch.style.height = "100vh";
+    stylesearch.style.top = "0";
     stylesearch.style.justifyContent = "center";
     stylesearch.style.alignItems = "center";
 
     ;
     divsearch.style.backgroundColor = "black";
-    divsearch.style.width = "80vw";
-    divsearch.style.height = "70vh";
+    divsearch.style.minWidth = "90vw";
+    divsearch.style.height = "80vh";
     divsearch.style.borderRadius = "16px";
     divsearch.style.justifyContent = "center";
     divsearch.style.display = "flex";
@@ -144,36 +145,37 @@ function searchfun() {
     searchbar.style.borderRadius = "16px";
     searchbar.style.margin = "20px";
     divsearch.append(searchbar);
-    document.querySelector('.searchbar').addEventListener('input', function () {
-        let i=0
-        if (event.data !== null && event.data !== undefined ) {
-            typsearch+=event.data
-        }
-        coffeeProductscopy.forEach(element => {
-            typsearch.forEach(element => {
-                
-            
-            if(element.name.includes(one)){
-                console.log("hell")
-                // afichage(element)
-                
-            }
-            i++
-        })
-            
-        });
-
-    })
-
-
-
-
-
-
-
+typsearch="";
+    document.querySelector('.searchbar').addEventListener('input', searchmicanism )
+    
 }
+function searchmicanism(){
+    
 
-// function afichage(element) {
-//     console.log(element);
+    
+    if (event.data !== null && event.data !== undefined ) {
+        typsearch+=(event.data)
+        
+        console.log(event.data);
+        }
+        let arrsearch=typsearch.split("")  ;
+        console.log(arrsearch)     
+         coffeeProductscopy.forEach(element => {
+            
+            if(element.name.includes(typsearch)){
+                afichage(element)
+                
+                
+            }}
+        )}
 
-// }
+
+
+
+    function afichage(element) {
+        console.log(element);
+        // typsearch=;
+
+
+
+    }
