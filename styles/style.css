@@ -591,7 +591,8 @@ tr {
 
 .searchsec {
 
-    display: block;
+    display: none;
+    padding-bottom: 60px;
 }
 .spanlist{
     display: flex;
@@ -604,6 +605,7 @@ tr {
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 
 
 }
