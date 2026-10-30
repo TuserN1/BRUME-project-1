@@ -174,7 +174,9 @@ function searchmicanism(){
 
     function afichage(element) {
         console.log(element);
-        // typsearch=;
+        array.forEach(element => {
+            
+        });
 
 
 
