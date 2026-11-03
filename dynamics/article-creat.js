@@ -12,21 +12,26 @@ btn_next1.addEventListener('click',()=>{
     text_valid(article_name)
     price_valid(article_price)
     description_valid(article_description)
-    promotion(article_promotion)    
+    image_valid(article_image) 
+    promotion(article_promotion)   
     
    
 
 });
 
-function text_valid(){
-    
+function text_valid(name){
+    if (name !== null){
+         
+    }
 
 
 }
 function price_valid(){
 
 }
+function image_valid(){
 
+}
 function description_valid(){
 
 }
