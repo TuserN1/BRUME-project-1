@@ -1,30 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/bootstrap.min.css">
-    <script src="/dynamics/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <script src="./dynamics/bootstrap.bundle.min.js" defer></script>
+    <script src="./dynamics/article-creat.js" defer></script>
 </head>
-<body>
+
+<body style="background-color:#cbb2b2;">
     <main>
-        <header><div>Brum</div></header>
-        <section class="">
-            <button type="button"> add article </button>
-        </section>
-        <section >
-           <div>
-            <h3></h3>
-             <label for=""></label>
-            <input type="text">
-             <label for=""></label>
-            <input type="text">
-           </div>
-            
+        <header class="bg-primary d-flex align-items-center w-auto">
+            <div>Brum <span>back-office</span></div>
+            <nav class="nav nav-underline .rounded-3 pe-8 ms-auto ">
+                <a class="nav-item nav-link .rounded-3" href="#">Tableau de bord </a>
+                <a class="nav-item nav-link .rounded-3" href="#">Produits</a>
+                <a class="nav-item nav-link .rounded-3" href="#">Commandes</a>
+            </nav>
+        </header>
+
+        <section class="bg-inverse p-9 m-8 " style="border-radius:16px;">
+            <span class=" d-flex gap-4"><span>Produits</span>/<span>Nouveau produit</span>
+            </span>
+            <h1 class="h1 ">Créer un produit</h1>
+            <span>Ajoutez une nouvelle boisson au catalogue en 3 étapes.</span>
+            <div class="progress mt-6" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100" style="height: 1px">
+                <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100" style="height: 20px">
+                <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <form id="full-form" class="m-3">
+
+                <div id="form1" class="d-grid grid-cols text-center gap-6">
+                    <h2 class="h2"> Informations Générales </h2>
+                    <label class="form-label"> article Name
+                        <input class="form-control" type="text" id="article-name" name="article-name">
+
+                    </label>
+
+                    <label class="d-flex flex-column form-label text-strat"> article price
+                        <input class="form-control" type="number" id="baseprice" min="0" step="0.01">
+                    </label>
+
+
+                    <label class="form-label input-group-text d-flex flex-column text-strat"> description
+                        <textarea style="  border: 2px solid rgb(25, 66, 36);;background-color: #57684aa7;" name="description" id="description"
+                            class="form-control"></textarea>
+                    </label>
+
+                    <label class="form-label">article image
+                        <input class="form-control" type="file" accept="image/*" id="articleimage" name="articleimage">
+                    </label>
+
+                    <div>
+                        <label>article promotion
+                            <input class="form-check-input mt-0" type="checkbox" id="promotion" name="promotion">
+                        </label>
+
+                    </div>
+                    <div class="hidden">
+                        <label class="form-label"> discount pourcentage
+                            <input class="form-control" type="number" id="discount" name="discount">
+                        </label>
+
+                        <label class="form-label">Date de fin
+                            <input type="date" id="enddate" name="enddate" class="form-control w-12 ">
+                        </label>
+                    </div>
+                    <button type="button" id="next1" class="theme-primary btn-solid btn-styled"> NEXT </button>
+                </div>
+
+                <div id="form2" class="visually-hidden">
+                    <h2> Caractéristiques & Options </h2>
+                    <label for="origin"> Origine des grains </label>
+                    <select name="origin" id="origin">
+                        <option value="">choisir l'origine</option>
+                        <option value="colombia">colombie</option>
+                        <option value="ethiopia"> ethiopie</option>
+                        <option value="brazil">Bresil</option>
+                        <option value="mix">melange maison</option>
+                    </select>
+                    <label for="intensity">Niveau de torréfaction / Intensité</label>
+                    <input type="range" id="intensity" name="intensity" min="1" max="10">
+
+                    <h3>Température</h3>
+
+                    <input type="radio" id="hot" name="Temperature" value="chaud">
+                    <label for="hot"> chaud </label>
+
+                    <input type="radio" name="Temperature" id="iced" value="glacé">
+                    <label for="iced"> glacé </label>
+
+                    <h3> Tailles disponibles </h3>
+
+
+                    <label>Small <input type="checkbox" id="small" name="sizes" </label>
+
+                        <label>Medium
+                            <input type="checkbox" id="meduim" name="sizes">
+                        </label>
+
+                        <label>Large
+                            <input type="checkbox" id="large" name="sizes" </label>
+
+                            <h3> Options de lait </h3>
+
+                            <label> Vache
+                                <input type="checkbox" name="milk" id="cowmilk" value="vache">
+                            </label>
+
+
+                            <label> Avoine
+                                <input type="checkbox" name="milk" id="oatmilk" value="avoine">
+                            </label>
+
+                            <label> Soja
+                                <input type="checkbox" name="milk" id="soymilk" value="soja">
+
+                            </label>
+
+                            <label> Amande
+                                <input type="checkbox" name="milk" id="almondmilk" value="amande">
+                            </label>
+
+                            <h3>Suppléments</h3>
+                            <label> Vanille
+                                <input type="checkbox" name="supplements" id="vanilla" value="Vanille">
+
+                            </label>
+
+                            <label> Caramel
+                                <input type="checkbox" name="supplements" id="caramel" value="Caramel">
+
+                            </label>
+
+                            <label> Noisette
+                                <input type="checkbox" name="supplements" id="noisette" value="Noisette">
+
+                            </label>
+
+                            <button type="button" id="goback-1"> Previous </button>
+                            <button type="button" id="next-2"> NEXT </button>
+                </div>
+
+                <div id="form3" class="visually-hidden">
+                    <button type="button" id="goback-2"> Previous </button>
+                    <button type="submit" id="submit"> NEXT </button>
+
+                </div>
+            </form>
 
         </section>
     </main>
-    
+
 </body>
+
 </html>
