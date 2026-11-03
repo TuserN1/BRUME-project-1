@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
-    <script src="./dynamics/bootstrap.bundle.min.js" defer></script>
-    <script src="./dynamics/article-creat.js" defer></script>
+    <script type="module" src="./dynamics/bootstrap.bundle.min.js" defer></script>
+    <script  src="./dynamics/article-creat.js" defer></script>
 </head>
 
 <body style="background-color:#cbb2b2;">
@@ -63,7 +63,8 @@
                         </label>
 
                     </div>
-                    <div class="hidden">
+                    
+                    <div class="">  <!-- //visually-hidden -->
                         <label class="form-label"> discount pourcentage
                             <input class="form-control" type="number" id="discount" name="discount">
                         </label>
