@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <title>Document</title>
+    <title>custome-coffee</title>
+    <script src="dynamics/index.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="band">Du grain à votre tasse. Un café qui vous ressemble.</div>
-        <div>
+        <div class="hheder">
             <div><img src="assets/Brume.png" alt=""><span>BRUME</span></div>
-            <nav>
+            <nav >
                 <a href="">L’atelier café</a>
                 <a href="">Notre savoir-faire</a>
                 <a href="">Besoin d’aide ?</a>
@@ -23,73 +26,211 @@
     </header>
     <main>
         <section class="Configurateur">
-           <article>
-             <div>
-                <img src="assets/Café M.png" alt=""></div>
-            <div>
-                <p><span>01  Personnaliser</span>- <span>02  Récapitulatif</span></p>
-                <div class="intro">
-                    <span>
-                        VOTRE COFFEE SHOP, AUTREMENT.
-                    </span>
-                    <h1>
-                        Votre pause, votre signature.
-                    </h1>
-                    <p>Quelques envies, un café unique.<br>À vous de composer la suite.</p>
+            <p><span>01 Personnaliser</span>- <span>02 Récapitulatif</span></p>
+            <section class="title">
+
+                <div class="summary">
+                    <span class="lighttxt">VOTRE CRÉATION EST PRÊTE</span>
+                    <h1>Votre moment café, exactement comme vous l’aimez.</h1>
                 </div>
-                <form action="">
-                    <div>
-                        <h3></h3>  
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value=""> 
+            </section>
+            <article>
+                <div class="hero">
+                    <div class="hero-top">
+                        <span>LE CAFÉ, À VOTRE FAÇON</span>
+                        <div class="lighttxt"><span>01</span>/<span>04</span></div>
                     </div>
-
-                     <div>
-                        <h3></h3>  
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value=""> 
+                    <img class="bgcaff" src="assets/Café M.png" alt="">
+                    <div class="hero-butom">
+                        <h3>Un petit rituel. Beaucoup de vous.</h3>
+                        <span class="lighttxt">ESPRESSO · M · AVOINE · CARAMEL</span>
                     </div>
-                    <div>
-                        <h3></h3>  
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value=""> 
-                    </div>         
-                   <div>
-                     <h3></h3>
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value="">
-                     <label for=""></label>
-                    <input type="radio" value="">
-                   </div>
+                    <div class="sousimage">
+                        <span >
+                            Torréfié avec soin
+                        </span>
+                        <span >
+                            Préparé à la demande
+                        </span>
+                    </div>
+                </div>
+                <div class="formholder">
+                    <p class="summary"><span>01 Personnaliser</span>- <span>02 Récapitulatif</span></p>
+                    <div class="intro">
+                        <span>
+                            VOTRE COFFEE SHOP, AUTREMENT.
+                        </span>
+                        <h2>
+                            Votre pause, votre signature.
+                        </h2>
+                        <p class="lighttxt">Quelques envies, un café unique.<br>À vous de composer la suite.</p>
+                    </div>
+                    <form action="">
+                        <div>
+                            <div class="choix-name">
+                                <h4>01 La base</h4><span class="lighttxt">Choix unique</span>
+                            </div>
+                            <div class="customize" class="scustom">
+
+                                <label class="">
+                                    <input id="test1" type="radio" name="base">
+                                    <div class="base-choix"><span id="base1" class="choix"></span>
+                                        <span id="base1-prix" class="base1 lighttxt"></span>
+                                    </div>
+                                </label>
+                                <label class="">
+                                    <input type="radio" name="base">
+                                    <div class="base-choix"><span id="base2" class="choix"></span>
+                                        <span id="base2-prix" class="base2 lighttxt"></span>
+                                    </div>
+                                </label>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="choix-name">
+                                <h4>02 La taille</h4><span class="lighttxt">Choix unique</span>
+                            </div>
+                            <div class="customizer">
+
+                                <label class="">
+                                    <input type="radio" name="taille">
+                                    <div class="taille-choix"><span class="choix"></span>
+                                        <span class="taille lighttxt"></span>
+                                    </div>
+                                </label>
+                                <label class="">
+                                    <input type="radio" name="taille">
+                                    <div class="taille-choix"><span class="choix"></span>
+                                        <span class="tailleM lighttxt"></span>
+                                    </div>
+                                </label>
+                                <label class="">
+                                    <input type="radio" name="taille">
+                                    <div class="taille-choix"><span class="choix"></span>
+                                        <span class="tailleL lighttxt"></span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="choix-name">
+                                <h4>03 Le lait</h4><span class="lighttxt">Choix unique</span>
+                            </div>
+                            <div class="customizer">
+
+                                <label class="">
+                                    <input type="radio" name="lait">
+                                    <div class="lait-choix"><span class="choix"></span>
+                                        <span class="lait1 lighttxt"></span>
+                                    </div>
+                                </label>
+                                <label class="">
+                                    <input type="radio" name="lait">
+                                    <div class="lait-choix"><span class="choix"></span>
+                                        <span class="lait2 lighttxt"></span>
+                                    </div>
+                                </label>
+                                <label class="">
+                                    <input type="radio" name="lait">
+                                    <div class="lait-choix"><span class="choix"></span>
+                                        <span class="lait3 lighttxt"></span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="choix-name">
+                                <h4>04 La touche en plus</h4><span class="lighttxt">Plusieurs choix</span>
+                            </div>
+                            <div class="customize" class="scustom">
+
+                                <label class="">
+                                    <input type="checkbox" name="en-plus">
+                                    <div class="plus-choix"><span class="choix"></span>
+                                        <span class="touch1 lighttxt"></span>
+                                    </div>
+                                </label>
+                                <label class="">
+                                    <input type="checkbox" name="en-plus">
+                                    <div class="plus-choix "><span class="choix"></span>
+                                        <span class="touch2 lighttxt"></span>
+                                    </div>
+                                </label>
+
+                            </div>
+                            <div class="lighttxt" style="margin-top:20px ; ">
+                                Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.
+                            </div>
+
+                        </div>
 
 
+                    </form>
+                </div>
 
-                </form>
+                <div class="summary factur">
+                    <span class="selectag1">✓ Sélection ajoutée</span>
+                    <span class="selectag2">aucune sélection</span>
+                    <h3>Votre récapitulatif</h3>
+                    <span class="lighttxt">Une création personnalisée · Quantité : <span>1</span>
+                    </span>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="right-cell lighttxt">Base · Espresso</td>
+                                <td class="left-cell">18,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Taille · M / 250 ml</td>
+                                <td class="left-cell">4,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Lait · Avoine</td>
+                                <td class="left-cell">4,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Supplément · Caramel</td>
+                                <td class="left-cell">3,00 DH</td>
+                            </tr>
+                            <tr>
+                                <td class="right-cell lighttxt">Total</td>
+                                <td class="left-cell totalcalc">29,00 DH</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <span class="lighttxt" >Prix de cette sélection · aucun paiement effectué.</span>
+
+                    <button type="button">Créer un autre café →</button>
+
+                    <div class="selectag1" style="width:auto; padding-left: 20px; display: flex;" >
+                        <img style="width: 12px; height: 12px; margin: 10px;" src="assets/Vector.png" alt="">
+                        <span  style="width:auto;">Votre sélection reste modifiable à tout
+                            moment.</span>
+                    </div>
+                </div>
+            </article>
+            <div class="nextpagebut">
+                <div>
+                    <div class="totalzone"> <span class="summary">Votre création · Café sur mesure</span>
+                        <span class="lighttxt">Total</span>
+                        <span><span class="testTotal" id="testTotal"></span>,00 DH</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="btnadd" type="button">Ajouter au panier →</button>
+                </div>
             </div>
-            <div>
-
+            <div class="last-part">
+                <span class="lighttxt">BRUME — Le goût de votre rythme.</span>
+                <span class="summary lighttxt">Une création unique, la vôtre.</span>
             </div>
-           </article>
         </section>
-        
+
     </main>
-    <footer>
-        <div>BRUME — Le goût de votre rythme.</div>
-        <div>Une création unique, la vôtre.</div>
-    </footer>
+    
+
 </body>
+
 </html>
