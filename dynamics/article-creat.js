@@ -5,7 +5,7 @@ const form1_values = {
     name: null,
     price: null,
     description: null,
-    image: "http://127.0.0.1:5501/assets/images.jpg"
+    image:null
 
 
 };
@@ -169,6 +169,7 @@ const btn_next2 = document.querySelector('#next-2')
 
 
 btn_next2.addEventListener('click', () => {
+    console.log("click")
     valid = true
     const article_origin = document.querySelector('#grains-source')
     const article_intens = document.querySelector('#intensity')
@@ -208,6 +209,11 @@ btn_next2.addEventListener('click', () => {
             </div>`
     }
     
+})
+
+document.querySelector('#goback-2').addEventListener('click', () => {
+    document.querySelector('#form3').classList.toggle('visually-hidden');
+    document.querySelector('#form2').classList.toggle('visually-hidden');
 })
 
 
